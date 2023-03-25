@@ -21,4 +21,6 @@ bool AWeapon_Projectile::Fire_Implementation()
 	spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 
 	world->SpawnActor(_Projectile, &_muzzle->GetComponentTransform(), spawnParams);
+
+	return true;
 }
