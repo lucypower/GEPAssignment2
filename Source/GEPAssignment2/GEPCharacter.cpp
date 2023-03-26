@@ -25,11 +25,8 @@ AGEPCharacter::AGEPCharacter()
 	_weaponAttachPoint->SetupAttachment(_camera);
 }
 
-// Called when the game starts or when spawned
-void AGEPCharacter::BeginPlay()
+void AGEPCharacter::Init_Implementation()
 {
-	Super::BeginPlay();
-
 	if (_defaultWeapon)
 	{
 		FActorSpawnParameters spawnParams;
@@ -43,14 +40,6 @@ void AGEPCharacter::BeginPlay()
 		if (UKismetSystemLibrary::DoesImplementInterface(spawnedGun, UFireable::StaticClass()))
 		{
 			_fireableRef = spawnedGun;
-		}
-	}
-
-	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
-	{
-		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
-		{
-			Subsystem->AddMappingContext(PlayerMappingContext, 0);
 		}
 	}
 }

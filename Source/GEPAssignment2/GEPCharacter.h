@@ -43,6 +43,9 @@ public:
 	// Sets default values for this character's properties
 	AGEPCharacter();
 
+	UFUNCTION(BlueprintNativeEvent)
+	void Init();
+
 protected:
 	// Called when the game starts or when spawned
 	
@@ -52,7 +55,6 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	TObjectPtr<AActor> _fireableRef;
 	
-	virtual void BeginPlay() override;
 
 	void Move(const FInputActionValue& value);
 
