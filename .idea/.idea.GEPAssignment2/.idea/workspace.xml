@@ -7,11 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86d30fd3-3c01-4eac-9c3e-a292568959a9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GEPAssignment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GEPAssignment2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BP_GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_GameMode.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GEPAssignment2/GEPAssignment2GameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GEPAssignment2/GEPAssignment2GameMode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GEPAssignment2/GEPAssignment2GameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GEPAssignment2/GEPAssignment2GameMode.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GEPAssignment2/GEPCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GEPAssignment2/GEPCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GEPAssignment2/GEPCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GEPAssignment2/GEPCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,6 +266,7 @@
       <workItem from="1679741549934" duration="2462000" />
       <workItem from="1679756274125" duration="209000" />
       <workItem from="1679821212388" duration="5959000" />
+      <workItem from="1680691422221" duration="2528000" />
     </task>
     <servers />
   </component>
