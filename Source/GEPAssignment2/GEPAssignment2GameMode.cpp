@@ -1,6 +1,8 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "GEPAssignment2GameMode.h"
+
+#include "GameRule.h"
 #include "GEPAssignment2Character.h"
 #include "GEPPlayerController.h"
 #include "GameFramework/PlayerStart.h"
@@ -11,6 +13,8 @@ AGEPAssignment2GameMode::AGEPAssignment2GameMode()
 	: Super()
 {
 	_countdownTimer = 3;
+
+	_GameRulesLeft = 0;
 }
 
 AActor* AGEPAssignment2GameMode::FindPlayerStart_Implementation(AController* Player, const FString& IncomingName)
@@ -64,11 +68,46 @@ void AGEPAssignment2GameMode::DecreaseCountdown()
 	}
 }
 
+void AGEPAssignment2GameMode::Handle_GameRuleCompleted(UGameRule* rule)
+{
+	if (*_GameRuleManagers.Find(rule)) { return; }
+
+	_GameRulesLeft--;
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Black,
+		FString::Printf(TEXT("GameRule completed. %d Remaining!"),  _GameRulesLeft));
+
+	if (_GameRulesLeft != 0) { return; }
+
+	EndMatch();
+}
+
+void AGEPAssignment2GameMode::Handle_GameRulePointsScored(AController* scorer, int points)
+{
+}
+
 void AGEPAssignment2GameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// TODO: Add game rule stuff here
+	TArray<UActorComponent*> outComponents;
+	GetComponents(outComponents);
+
+	for (UActorComponent* comp : outComponents)
+	{
+		if (UGameRule* rule = Cast<UGameRule>(comp))
+		{
+			_GameRuleManagers.Add(rule, rule->m_isOptional);
+			
+			rule->Init();
+			rule->OnGameRuleCompleted.AddDynamic(this, &AGEPAssignment2GameMode::Handle_GameRuleCompleted);
+			rule->OnGameRulePointsScored.AddDynamic(this, &AGEPAssignment2GameMode::Handle_GameRulePointsScored);
+
+			if (!rule->m_isOptional)
+			{
+				_GameRulesLeft++;
+			}
+		}
+	}
 }
 
 void AGEPAssignment2GameMode::HandleMatchIsWaitingToStart()
