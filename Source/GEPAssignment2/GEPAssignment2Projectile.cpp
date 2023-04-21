@@ -3,6 +3,7 @@
 #include "GEPAssignment2Projectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 AGEPAssignment2Projectile::AGEPAssignment2Projectile() 
 {
@@ -34,10 +35,15 @@ AGEPAssignment2Projectile::AGEPAssignment2Projectile()
 void AGEPAssignment2Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	// Only add impulse and destroy projectile if we hit a physics
-	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
+	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr))
 	{
-		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
+		UGameplayStatics::ApplyDamage(OtherActor, 100.f, GetInstigatorController(), this, UDamageType::StaticClass());
+		
+		if (OtherComp->IsSimulatingPhysics())
+		{
+			OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
 
-		Destroy();
+			Destroy();			
+		}
 	}
 }

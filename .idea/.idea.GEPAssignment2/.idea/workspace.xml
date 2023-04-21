@@ -5,16 +5,14 @@
     <projectFile>Intermediate/ProjectFiles/UE5.vcxproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86d30fd3-3c01-4eac-9c3e-a292568959a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GEPAssignment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GEPAssignment2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BP_GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_GameMode.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GEPAssignment2/GEPAssignment2GameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GEPAssignment2/GEPAssignment2GameMode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GEPAssignment2/GEPAssignment2GameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GEPAssignment2/GEPAssignment2GameMode.h" afterDir="false" />
-    </list>
+    <list default="true" id="86d30fd3-3c01-4eac-9c3e-a292568959a9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/GEPAssignment2/Collectable.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -272,6 +270,8 @@
       <workItem from="1680691422221" duration="2528000" />
       <workItem from="1681643967868" duration="4794000" />
       <workItem from="1682067668764" duration="6722000" />
+      <workItem from="1682078972252" duration="64000" />
+      <workItem from="1682079116046" duration="4517000" />
     </task>
     <servers />
   </component>
