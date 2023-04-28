@@ -40,7 +40,7 @@ void UGameRule_Collectables::Init()
 void UGameRule_Collectables::Handle_Collected(ACollectable* subject, AController* causer)
 {
 	m_amountRemaining--;
-
+	
 	BroadcastGameRulePointsScored(causer, 1);
 
 	if (m_amountRemaining == 0)

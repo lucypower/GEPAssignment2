@@ -22,12 +22,12 @@ void UGameRule_Targets::Init()
 	}
 
 	_AmountRemaining = _Targets.Num();
-
+	
 	for (UTarget* target : _Targets)
 	{
 		target->OnTargetDestroyed.AddDynamic(this, &UGameRule_Targets::Handle_TargetDestroyed);
 	}
-	
+		
 	Super::Init();
 }
 
@@ -36,6 +36,9 @@ void UGameRule_Targets::Handle_TargetDestroyed(AActor* target, AController* caus
 
 	_AmountRemaining--;
 
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Black,
+FString::Printf(TEXT("GameRule_Collectables: gdfgdgfgfdgdgfdgdfggfdgfdgdfgdfgdffgfdgdfgfdgdfgdfgdfg"), _AmountRemaining));
+	
 	BroadcastGameRulePointsScored(causer, 1);
 
 	if (_AmountRemaining == 0)
