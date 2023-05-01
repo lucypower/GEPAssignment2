@@ -7,6 +7,7 @@
 
 class UInputMappingContext;
 class UWidget_Score;
+class UWidget_GoalText;
 
 UCLASS(Abstract)
 class GEPASSIGNMENT2_API AGEPPlayerController : public APlayerController, public IMatchStateHandler
@@ -35,6 +36,11 @@ protected:
 	TSubclassOf<UWidget_Score> _scoreWidgetClass;
 
 	TObjectPtr<UWidget_Score> _scoreWidget;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UWidget_GoalText> _goalWidgetClass;
+
+	TObjectPtr<UWidget_GoalText> _goalWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"));
 	TObjectPtr<UInputMappingContext> _defaultMappingContext; // is fine, rider error

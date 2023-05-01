@@ -5,6 +5,7 @@
 
 #include "EnhancedInputSubsystems.h"
 #include "GEPCharacter.h"
+#include "Widget_GoalText.h"
 #include "Widget_Score.h"
 #include "GameFramework/GameModeBase.h"
 #include "Kismet/GameplayStatics.h"
@@ -31,6 +32,12 @@ void AGEPPlayerController::Init_Implementation()
 	{
 		_scoreWidget = CreateWidget<UWidget_Score, AGEPPlayerController*>(this, _scoreWidgetClass);
 		_scoreWidget->AddToViewport();
+	}
+
+	if (_goalWidgetClass)
+	{
+		_goalWidget = CreateWidget<UWidget_GoalText, AGEPPlayerController*>(this, _goalWidgetClass);
+		_goalWidget->AddToViewport();
 	}
 }
 

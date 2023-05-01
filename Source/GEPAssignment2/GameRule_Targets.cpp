@@ -22,6 +22,9 @@ void UGameRule_Targets::Init()
 	}
 
 	_AmountRemaining = _Targets.Num();
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Black,
+		FString::Printf(TEXT("GameRule_Collectables: Found %d Collectables in World"), _AmountRemaining));
 	
 	for (UTarget* target : _Targets)
 	{
@@ -35,9 +38,6 @@ void UGameRule_Targets::Handle_TargetDestroyed(AActor* target, AController* caus
 {
 
 	_AmountRemaining--;
-
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Black,
-FString::Printf(TEXT("GameRule_Collectables: gdfgdgfgfdgdgfdgdfggfdgfdgdfgdfgdffgfdgdfgfdgdfgdfgdfg"), _AmountRemaining));
 	
 	BroadcastGameRulePointsScored(causer, 1);
 
