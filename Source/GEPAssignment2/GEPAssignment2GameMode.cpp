@@ -83,6 +83,12 @@ void AGEPAssignment2GameMode::Handle_GameRuleCompleted(UGameRule* rule)
 
 void AGEPAssignment2GameMode::Handle_GameRulePointsScored(AController* scorer, int points)
 {
+	AGEPPlayerController* castedPC = Cast<AGEPPlayerController>(scorer); //TODO: CHANGE TO INTERFACE
+
+	if (castedPC)
+	{
+		castedPC->AddScore(points);
+	}
 }
 
 void AGEPAssignment2GameMode::BeginPlay()

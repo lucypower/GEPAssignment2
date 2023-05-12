@@ -28,7 +28,7 @@ void UTarget::BeginPlay()
 }
 
 void UTarget::Handle_Dead(AController* causer)
-{
+{	
 	OnTargetDestroyed.Broadcast(GetOwner(), causer);
 	
 	GetOwner()->Destroy();
