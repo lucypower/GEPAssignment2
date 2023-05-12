@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.1",
+	"EngineAssociation": "{F3A01796-4A5F-A15C-1972-46A9A196DF81}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -21,5 +21,8 @@
 				"Editor"
 			]
 		}
+	],
+	"TargetPlatforms": [
+		"Windows"
 	]
 }

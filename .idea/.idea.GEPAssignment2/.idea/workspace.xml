@@ -5,17 +5,7 @@
     <projectFile>Intermediate/ProjectFiles/UE5.vcxproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86d30fd3-3c01-4eac-9c3e-a292568959a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GEPAssignment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GEPAssignment2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BP_Target.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_Target.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/DI/1JZHHCOBVQ2F5XRUWSES1X.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/DI/1JZHHCOBVQ2F5XRUWSES1X.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/7/8K/0OLPBOSZCPU1X7E3PCLCGF.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/9/XO/9XNYDOAXWYGEBBYZX2NXJL.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/9/XO/9XNYDOAXWYGEBBYZX2NXJL.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GEPAssignment2.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/GEPAssignment2.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GEPAssignment2/GEPPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GEPAssignment2/GEPPlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GEPAssignment2/GEPPlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GEPAssignment2/GEPPlayerController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/GEPAssignment2/GameRule_Targets.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/GEPAssignment2/GameRule_Targets.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="86d30fd3-3c01-4eac-9c3e-a292568959a9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,6 +275,7 @@
       <workItem from="1682327339974" duration="3926000" />
       <workItem from="1682683558472" duration="3953000" />
       <workItem from="1682933628066" duration="4858000" />
+      <workItem from="1683833220614" duration="5564000" />
     </task>
     <servers />
   </component>

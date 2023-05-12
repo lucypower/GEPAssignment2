@@ -71,6 +71,9 @@ void AGEPCharacter::Shoot()
 	if (_fireableRef)
 	{
 		IFireable::Execute_Fire(_fireableRef);
+
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Black,
+		FString::Printf(TEXT("Weapon Fired")));
 	}
 }
 
